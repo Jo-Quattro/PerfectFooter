@@ -1,0 +1,14 @@
+footer {
+	display: flex;
+}
+footer .social {
+	width: 10rem;
+}
+footer > .socialCard {
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	display: flex;
+}
