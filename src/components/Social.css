@@ -1,14 +1,13 @@
-footer {
-	display: flex;
-}
-footer .social {
+.social {
 	width: 10rem;
-}
-footer > .socialCard {
-	display: flex;
-	flex-direction: column;
 }
 
 footer {
+	height: 10rem;
 	display: flex;
+	align-items: flex-end;
+}
+.socialCard {
+	display: flex;
+	flex-direction: column;
 }

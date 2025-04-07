@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Social from "./components/Social";
 
@@ -20,11 +21,17 @@ const socialNetworks = [
 ];
 
 function App() {
+	const [selectedNetwork, setSelectedNetwork] = useState("Instagram");
 	return (
 		<footer>
 			{socialNetworks.map((social) => (
 				<section className="socialCard" key={social.key}>
-					<Social image={social.image} name={social.name} />
+					<Social
+						image={social.image}
+						name={social.name}
+						selectedNetwork={selectedNetwork}
+						onSelect={setSelectedNetwork}
+					/>
 				</section>
 			))}
 		</footer>

@@ -1,22 +1,22 @@
-import { useState } from "react";
 import "./Social.css";
 
 interface networkProps {
 	image: string;
 	name: string;
+	selectedNetwork: string;
+	onSelect: (name: string) => void;
 }
 
-function Social({ image, name }: networkProps) {
-	const [ChangeSocial, setChangeSocial] = useState(name);
-
+function Social({ image, name, selectedNetwork, onSelect }: networkProps) {
 	function handleClickSocial() {
-		console.log(name);
-		setChangeSocial(ChangeSocial);
+		onSelect(name);
 	}
 
 	return (
 		<>
-			<img className="social" src={image} alt={name} />
+			{selectedNetwork === name && (
+				<img className="social" src={image} alt={name} />
+			)}
 			<button type="button" onClick={handleClickSocial}>
 				{name}
 			</button>
