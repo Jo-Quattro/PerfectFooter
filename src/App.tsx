@@ -1,5 +1,7 @@
 import "./App.css";
 import Social from "./components/Social";
+import Header from "./components/Header.tsx";
+import Nav from "./components/Nav.tsx";
 
 const socialNetworks = [
 	{
@@ -21,13 +23,16 @@ const socialNetworks = [
 
 function App() {
 	return (
-		<footer>
-			{socialNetworks.map((social) => (
-				<section className="socialCard" key={social.key}>
-					<Social image={social.image} name={social.name} />
-				</section>
-			))}
-		</footer>
+		<>
+			<Header />
+			<footer>
+				{socialNetworks.map((social) => (
+					<section className="socialCard" key={social.key}>
+						<Social image={social.image} name={social.name} />
+					</section>
+				))}
+			</footer>
+		</>
 	);
 }
 
